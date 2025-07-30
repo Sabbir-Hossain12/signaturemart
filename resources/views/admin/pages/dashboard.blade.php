@@ -1,4 +1,4 @@
-@include('admin.layout.app')
+@extends('admin.layout.app')
 
 @push('css') 
     
@@ -7,7 +7,7 @@
 
 @section('content')
     
-    
+    asdasdsadsfsdfsfsd
 @endsection
 
 
