@@ -22,13 +22,23 @@
               </div>
               <h4>Hello! let's get started</h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
-              <form class="pt-3" method="POST" action="{{route('login')}}">
+              <form class="pt-3" method="POST" action="{{route('admin.login')}}">
                 @csrf
                 <div class="form-group">
                   <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="Email">
+                    <div class="mt-1">
+                        @error('email')
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
+                    </div>
                 </div>
                 <div class="form-group">
                   <input type="password" class="form-control form-control-lg" name="password" id="password" placeholder="Password">
+                    <div class="mt-1">
+                        @error('password')
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror
+                    </div>
                 </div>
                 <div class="mt-3">
                   <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit">SIGN IN</button>
